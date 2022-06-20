@@ -1,0 +1,108 @@
+.option-box {
+  padding: 8px 16px;
+  background: #000000;
+  font-size: 3.5vw;
+  color: rgb(255, 255, 255);
+  font-family: 'Possible', monospace;
+  border-radius: 20px;
+  width: 10%;
+  position: absolute;
+  bottom: 7%;
+  right: 11%;
+  left: 0;
+  margin-left: auto;
+  /* margin-right: 13.5%; */
+  margin-bottom: 11%;
+}
+
+.option-box p {
+  margin: 2px;
+}
+
+.text-typing {
+  padding: 8px 16px;
+  background: #000000;
+  font-size: 3.5vw;
+  color: rgb(255, 255, 255);
+  font-family: 'Possible', monospace;
+  border-radius: 20px;
+  margin: auto;
+
+  /* Try bottom */
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+.text-typing p {
+  margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(22, end) forwards;
+  /* , blink 1s infinite; */
+}
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  0%,
+  100% {
+    border-right: 2px solid transparent;
+  }
+  50% {
+    border-right: 2px solid rgb(255, 255, 255);
+  }
+}
+
+.showArrow {
+  animation: cssAnimation 0s 4s forwards, blinker 1s linear infinite;
+  visibility: hidden;
+  float: right;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes cssAnimation {
+  to {
+    visibility: visible;
+  }
+}
+
+@font-face {
+  font-family: 'Possible';
+  src: local('Possible'),
+    url(/../assets/fonts/DefinitelyPossible.ttf) format('truetype');
+}
+
+/* Main Page button */
+.mainPageBtn {
+  display: block;
+  float: right;
+  padding: 10px 10px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

@@ -1,0 +1,35 @@
+<a class="mainPageBtn" [routerLink]="['/MainPage']">
+  <a href="" id="mainPageBtn" class="mainPageBtn" target="_blank"
+    ><img src="/../assets/images/2.png" width="64"
+  /></a>
+</a>
+
+<div id="optionboxdiv" class="option-box noselect">
+  <p
+    id="optionbox1"
+    (mouseover)="changeColorOver1()"
+    (mouseout)="changeColorOut1()"
+    (click)="nextLine()"
+  >
+    Okay!
+  </p>
+  <p
+    id="optionbox2"
+    (mouseover)="changeColorOver2()"
+    (mouseout)="changeColorOut2()"
+    (click)="nextLine()"
+  >
+    Nope!
+  </p>
+</div>
+
+<div id="textboxdiv" (click)="nextLine()" class="text-typing noselect">
+  <p id="textbox" class="text"></p>
+  <span id="showArrow" class="showArrow">&#9660;</span>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

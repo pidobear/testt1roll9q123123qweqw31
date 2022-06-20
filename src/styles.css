@@ -1,0 +1,23 @@
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/
+
+/* body {
+  margin: 0px;
+  height: 100vh;
+  display: absolute;
+  align-items: center;
+  justify-content: center;
+  background: #ddd;
+  font-family: 'Possible', Arial, Helvetica, sans-serif;
+} */
+
+html {
+  background-image: url('/../assets/images/backgroundwp.gif'),
+    url('/../assets/images/backgroundwp.gif');
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+}
