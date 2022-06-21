@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.css'],
 })
-export class LandingComponent {
+export class LandingComponent implements OnInit {
   playMusic: Boolean = false;
   audio = new Audio();
+  ngOnInit() {
+    ttoggleMusic();
+  }
   toggleMusic() {
     if (this.playMusic) {
       this.stopAudio();
@@ -19,7 +22,7 @@ export class LandingComponent {
   }
   playAudio() {
     this.audio.src =
-      "https://github.com/pidobear/testt1roll9q123123qweqw31/raw/master/src/assets/music/Nico%20Staf%20_%20Fast%20and%20Run.mp3";
+      'https://github.com/pidobear/testt1roll9q123123qweqw31/raw/master/src/assets/music/Nico%20Staf%20_%20Fast%20and%20Run.mp3';
     this.audio.load();
     this.audio.play();
     this.audio.volume = 0.7;
