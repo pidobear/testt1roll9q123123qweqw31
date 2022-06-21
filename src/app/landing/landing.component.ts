@@ -21,6 +21,7 @@ export class LandingComponent {
     this.audio.src = '/../assets/music/Nico Staf _ Fast and Run.mp3';
     this.audio.load();
     this.audio.play();
+    this.audio.volume = 0.7;
     console.log('play');
   }
   stopAudio() {
