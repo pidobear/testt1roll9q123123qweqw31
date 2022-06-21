@@ -18,7 +18,8 @@ export class LandingComponent {
     }
   }
   playAudio() {
-    this.audio.src = '/../assets/music/Nico Staf _ Fast and Run.mp3';
+    this.audio.src =
+      "https://github.com/pidobear/testt1roll9q123123qweqw31/raw/master/src/assets/music/Nico%20Staf%20_%20Fast%20and%20Run.mp3";
     this.audio.load();
     this.audio.play();
     this.audio.volume = 0.7;
