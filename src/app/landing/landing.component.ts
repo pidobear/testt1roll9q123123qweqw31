@@ -9,16 +9,19 @@ export class LandingComponent implements OnInit {
   playMusic: Boolean = false;
   audio = new Audio();
   ngOnInit() {
-    ttoggleMusic();
+    this.playAudio();
   }
   toggleMusic() {
     if (this.playMusic) {
       this.stopAudio();
       this.playMusic = false;
     } else {
-      this.playAudio();
+      this.unmuteAudio();
       this.playMusic = true;
     }
+  }
+  unmuteAudio() {
+    this.audio.volume = 0.7;
   }
   playAudio() {
     this.audio.src =
@@ -26,11 +29,12 @@ export class LandingComponent implements OnInit {
     this.audio.load();
     this.audio.play();
     this.audio.volume = 0.7;
-    console.log('play');
+    // console.log('play');
   }
   stopAudio() {
-    this.audio.pause();
-    this.audio.currentTime = 0;
-    console.log('stop');
+    this.audio.volume = 0;
+    // this.audio.pause();
+    // this.audio.currentTime = 0;
+    // console.log('stop');
   }
 }
