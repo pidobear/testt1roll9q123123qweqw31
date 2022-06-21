@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { products } from '../products';
 
@@ -7,15 +7,21 @@ import { products } from '../products';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css'],
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit, OnDestroy {
   products = products;
   day: number = 0;
-
+  playMusic: Boolean = true;
+  audio = new Audio();
   share() {
     window.alert('The product has been shared!');
   }
   ngOnInit() {
     this.nextLine();
+    this.playAudio();
+  }
+
+  ngOnDestroy() {
+    this.stopAudio();
   }
 
   nextLine() {
@@ -82,6 +88,39 @@ export class ProductListComponent implements OnInit {
   changeColorOut2() {
     var e4 = document.getElementById('optionbox2');
     e4!.style.color = 'white';
+  }
+  // BG-music
+  toggleMusic() {
+    if (this.playMusic) {
+      this.muteAudio();
+      this.playMusic = false;
+    } else {
+      this.unmuteAudio();
+      this.playMusic = true;
+    }
+  }
+  unmuteAudio() {
+    this.audio.volume = 0.7;
+  }
+  playAudio() {
+    this.audio.src =
+      'https://github.com/pidobear/testt1roll9q123123qweqw31/raw/master/src/assets/music/Nico%20Staf%20_%20Fast%20and%20Run.mp3';
+    this.audio.load();
+    this.audio.play();
+    this.audio.loop = true;
+    this.audio.volume = 0.7;
+    // console.log('play');
+  }
+  muteAudio() {
+    this.audio.volume = 0;
+    // this.audio.pause();
+    // this.audio.currentTime = 0;
+    // console.log('stop');
+  }
+  stopAudio() {
+    this.audio.pause();
+    this.audio.currentTime = 0;
+    console.log('stop');
   }
 }
 
