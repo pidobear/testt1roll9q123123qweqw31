@@ -10,20 +10,22 @@ export class LandingComponent {
   audio = new Audio();
   toggleMusic() {
     if (this.playMusic) {
-      this.playAudio();
-      this.playMusic = true;
-    } else {
       this.stopAudio();
       this.playMusic = false;
+    } else {
+      this.playAudio();
+      this.playMusic = true;
     }
   }
   playAudio() {
-    this.audio.src = '../../../assets/music/Nico Staf _ Fast and Run.mp3';
+    this.audio.src = '/../assets/music/Nico Staf _ Fast and Run.mp3';
     this.audio.load();
     this.audio.play();
+    console.log('play');
   }
   stopAudio() {
     this.audio.pause();
     this.audio.currentTime = 0;
+    console.log('stop');
   }
 }
