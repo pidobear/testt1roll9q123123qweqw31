@@ -104,7 +104,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   }
   playAudio() {
     this.audio.src =
-      'https://github.com/pidobear/testt1roll9q123123qweqw31/raw/master/src/assets/music/Nico%20Staf%20_%20Fast%20and%20Run.mp3';
+      'https://github.com/pidobear/testt1roll9q123123qweqw31/raw/master/src/assets/music/Dan%20Henig%20_%20Danger%20Snow.mp3';
     this.audio.load();
     this.audio.play();
     this.audio.loop = true;
