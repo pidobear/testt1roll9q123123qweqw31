@@ -24,6 +24,7 @@ export class LandingComponent implements OnInit, OnDestroy {
     }
   }
   unmuteAudio() {
+    this.audio.muted = false;
     this.audio.volume = 0.7;
   }
   playAudio() {
@@ -36,14 +37,16 @@ export class LandingComponent implements OnInit, OnDestroy {
     // console.log('play');
   }
   muteAudio() {
+    this.audio.muted = true;
     this.audio.volume = 0;
     // this.audio.pause();
     // this.audio.currentTime = 0;
     // console.log('stop');
   }
   stopAudio() {
-    this.audio.pause();
-    this.audio.currentTime = 0;
+    // this.audio.pause();
+    // this.audio.currentTime = 0;
+    this.audio.src = '';
     console.log('stop');
   }
 }
